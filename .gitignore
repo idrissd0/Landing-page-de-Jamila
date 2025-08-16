@@ -1,0 +1,5 @@
+images/
+
+# Ignore all jpg and png files in images folder
+images/*.jpg
+images/*.png
