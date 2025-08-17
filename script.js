@@ -35,4 +35,56 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Run once on load
     animateOnScroll();
+
+    // Draw lines connecting features to the product image
+    const canvas = document.getElementById('linesCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Center of the product image
+        const centerX = 400;
+        const centerY = 300;
+
+        // Feature circle centers
+        const featurePositions = [
+            { x: 400, y: 100 },  // Feature 1
+            { x: 600, y: 200 },  // Feature 2
+            { x: 600, y: 450 },  // Feature 3
+            { x: 400, y: 550 },  // Feature 4
+            { x: 200, y: 450 },  // Feature 5
+            { x: 200, y: 200 }   // Feature 6
+        ];
+
+        // Set canvas size
+        function drawLines() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.strokeStyle = '#7f8c8d';
+            ctx.lineWidth = 2;
+
+            featurePositions.forEach(pos => {
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+
+                // Draw arrowhead
+                const angle = Math.atan2(pos.y - centerY, pos.x - centerX);
+                ctx.beginPath();
+                ctx.moveTo(pos.x, pos.y);
+                ctx.lineTo(
+                    pos.x - 15 * Math.cos(angle - Math.PI / 6),
+                    pos.y - 15 * Math.sin(angle - Math.PI / 6)
+                );
+                ctx.moveTo(pos.x, pos.y);
+                ctx.lineTo(
+                    pos.x - 15 * Math.cos(angle + Math.PI / 6),
+                    pos.y - 15 * Math.sin(angle + Math.PI / 6)
+                );
+                ctx.stroke();
+            });
+        }
+
+        drawLines();
+
+        // Redraw lines on window resize
+        window.addEventListener('resize', drawLines);
 });
