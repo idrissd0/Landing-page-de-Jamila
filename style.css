@@ -7,7 +7,7 @@
 }
 
 body {
-    width: 1000px;
+    max-width: 1000px;
     height: 3000px;
     margin: 0 auto;
     background-color: #F2F2F2;
@@ -20,7 +20,8 @@ body {
 /* Hero Section */
 .hero {
     width: 100%;
-    height: 800px;
+    height: fit-content;
+    padding: 0px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +31,6 @@ body {
     background-image: url(testBG.png);
     background-position: center;
     background-size: cover;
-    padding: 50px 50px;
 }
 
 .hero h1 {
@@ -44,10 +44,10 @@ body {
     border-radius: 10px;
 }
 
-.hero p {
-    font-size: 24px;
+.hero>p {
+    font-size: 55px;
     margin-bottom: 30px;
-    color: #9b9b9b;
+    color: #D90404;
     line-height: 1.5;
     max-width: 700px;
 }
@@ -57,21 +57,47 @@ body {
     /* anchor for absolute positioning */
     display: inline-block;
     /* so it wraps image size */
+    padding: 20px 0 0 0;
+    /* space for text */
 }
 
 .hero span p {
+    width: 100%;
     position: absolute;
-    top: 0;
     left: 50%;
     /* center horizontally */
     transform: translateX(-50%);
     /* adjust centering */
+}
+
+.hero span p:nth-of-type(1) {
+    font-size: 25px !important;
+    top: 0;
     font-size: 20px;
-    color: #91D9D9;
+    color: #3CA6A6;
+}
+
+.hero span p:nth-of-type(2) {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 35px;
+    width: max-content;
+    padding: 1px 10px;
+    background-color: #fce5a081;
+    border-radius: 5px;
+    color: #ff0000 !important;
+    cursor: pointer;
+    /* transform on hover */
+    transition: font-size 0.5s;
+}
+
+.hero span p:nth-of-type(2):hover {
+    font-size: 26px;
 }
 
 .hero-image {
-    width: 300px;
+    width: 400px;
     height: auto;
     margin-bottom: 10px;
     margin-top: 0;
@@ -113,7 +139,7 @@ body {
 .container {
     position: relative;
     width: 800px;
-    height:90vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,10 +189,13 @@ body {
 
 canvas {
     position: absolute;
-    top: 100px; /* modified was 0 */
-    left: -18px; /* modified was 0 */
+    top: 100px;
+    /* modified was 0 */
+    left: -18px;
+    /* modified was 0 */
     z-index: 5;
-    width: 851px; /* addeds */
+    width: 851px;
+    /* addeds */
 }
 
 /* Positioning features in a circular layout */
@@ -199,25 +228,26 @@ canvas {
     top: 190px;
     left: 30px;
 }
+
 /* Button */
 .features-btn {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 
 .cta-btn {
-  background-color: #3CA6A6;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  padding: 15px 40px;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
+    background-color: #3CA6A6;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .cta-btn:hover {
-  background-color: #F2BD1D;
-  transform: translateY(-3px);
+    background-color: #F2BD1D;
+    transform: translateY(-3px);
 }
 
 /* Product Details */
