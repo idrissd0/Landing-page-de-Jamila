@@ -31,6 +31,7 @@ body {
     background-image: url(testBG.png);
     background-position: center;
     background-size: cover;
+    background-image: url(./images/testBG.png);
 }
 
 .hero h1 {
@@ -52,39 +53,32 @@ body {
     max-width: 700px;
 }
 
-.hero span {
-    position: relative;
-    /* anchor for absolute positioning */
-    display: inline-block;
-    /* so it wraps image size */
-    padding: 20px 0 0 0;
-    /* space for text */
+.hero div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
 }
 
-.hero span p {
+.hero div span p {
     width: 100%;
-    position: absolute;
-    left: 50%;
-    /* center horizontally */
-    transform: translateX(-50%);
-    /* adjust centering */
 }
 
-.hero span p:nth-of-type(1) {
+.hero div span p:nth-of-type(1) {
     font-size: 25px !important;
     top: 0;
     font-size: 20px;
     color: #3CA6A6;
 }
 
-.hero span p:nth-of-type(2) {
+.hero div span p:nth-of-type(2) {
     font-size: 25px;
     font-weight: 500;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     top: 35px;
     width: max-content;
     padding: 1px 10px;
-    background-color: #fce5a081;
+    background-color: #ffffffc8;
     border-radius: 5px;
     color: #ff0000 !important;
     cursor: pointer;
@@ -92,25 +86,22 @@ body {
     transition: font-size 0.5s;
 }
 
-.hero span p:nth-of-type(2):hover {
+.hero div span p:nth-of-type(2):hover {
     font-size: 26px;
 }
 
 .hero-image {
-    width: 400px;
-    height: auto;
     margin-bottom: 10px;
     margin-top: 0;
     border-radius: 10px;
-    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
 }
 
 /* Features Section */
 
 .features {
     width: 100%;
+    height: 150vh;
     padding: 50px 0;
-    background-color: #91D9D9;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,33 +113,17 @@ body {
     text-align: center;
 }
 
-.features-body {
-    width: 100%;
-    padding-top: 40px;
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f7fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    margin: 0;
-    overflow: auto;
-    background-color: #91D9D9;
-}
-
 .container {
     position: relative;
     width: 800px;
     height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .product-image {
-    width: 200px;
-    height: 200px;
-    background-color: #2c3e50;
+    width: 100px;
+    height: 300px;
     border-radius: 5%;
     padding: 10px;
     display: flex;
@@ -158,9 +133,9 @@ body {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    align-self: flex-start;
+    z-index: 999;
+    position: absolute;
+    top: 35%;
 }
 
 .feature {
@@ -189,9 +164,9 @@ body {
 
 canvas {
     position: absolute;
-    top: 100px;
+    top: 75px;
     /* modified was 0 */
-    left: -18px;
+    left: -25px;
     /* modified was 0 */
     z-index: 5;
     width: 851px;
@@ -199,9 +174,10 @@ canvas {
 }
 
 /* Positioning features in a circular layout */
-.feature:nth-child(1) {
-    top: 50px;
-    left: 340px;
+
+.container .feature:nth-of-type(1) {
+    top: 188px;
+    left: 616px;
 }
 
 .feature:nth-child(2) {
@@ -209,24 +185,23 @@ canvas {
     left: 616px;
 }
 
-.feature:nth-child(3) {
-    top: 528px;
-    left: 618px;
+.container .feature:nth-of-type(2) {
+    top: 515px;
+    left: 605px;
 }
 
-.feature:nth-child(4) {
-    top: 690px;
-    left: 322px;
+.container .feature:nth-of-type(3) {
+    top: 665px;
+    left: 315px;
+}
+.container .feature:nth-of-type(4) {
+    top: 532px;
+    left: 40px;
 }
 
-.feature:nth-child(5) {
-    top: 517px;
-    left: 22px;
-}
-
-.feature:nth-child(6) {
+.container .feature:nth-of-type(5) {
     top: 190px;
-    left: 30px;
+    left: 15px;
 }
 
 /* Button */
@@ -242,12 +217,12 @@ canvas {
     padding: 15px 40px;
     border-radius: 12px;
     text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, padding 0.2s ease;
 }
 
 .cta-btn:hover {
     background-color: #F2BD1D;
-    transform: translateY(-3px);
+    padding: 20px 45px;
 }
 
 /* Product Details */
