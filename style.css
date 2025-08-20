@@ -46,10 +46,12 @@ body {
 
 .hero>p {
     font-size: 55px;
+    font-weight: bold;
     margin-bottom: 30px;
     color: #D90404;
     line-height: 1.5;
     max-width: 700px;
+    text-shadow: 2px 2px 4px #f2f2f2d3;
 }
 
 .hero div {
@@ -235,7 +237,7 @@ canvas {
     align-items: center;
 }
 
-.product-comparison .section-title:nth-of-type(1){
+.product-comparison .section-title:nth-of-type(1) {
     color: #ff0000;
     text-shadow: 2px 2.5px 5px #d8d8d8;
 }
@@ -319,50 +321,98 @@ canvas {
 
 .product-comparison .section-title:nth-of-type(2) {
     color: #91D9D9;
-    
+
     text-shadow: 2px 2.5px 5px #d8d8d8;
 }
 
-/* CTA Section */
-.cta-section {
+/* Reviews Section */
+.reviews-section {
     width: 100%;
-    padding: 120px 50px;
-    background-color: #3CA6A6;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #3CA6A6, #2F8F8F);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.cta-section h2 {
-    font-size: 48px;
-    margin-bottom: 40px;
-    color: #FFFFFF;
-    max-width: 700px;
+.reviews-section h2 {
+    font-size: 50px;
+    margin-bottom: 60px;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
-.cta-section p {
-    font-size: 20px;
-    margin-bottom: 50px;
-    color: #FFFFFF;
-    max-width: 600px;
-    line-height: 1.6;
+        /* Reviews container */
+.reviews_container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
-.cta-button {
-    background-color: #D90404;
-    color: #FFFFFF;
-    border: none;
-    padding: 18px 45px;
-    font-size: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
+        /* Reviews cards layout */
+.reviews_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.cta-button:hover {
-    background-color: #B00303;
+        /* Individual card */
+.reviews_cards .card {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviews_cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+        /* Profile picture */
+.reviews_cards .card .reviewer_profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3CA6A6;
+}
+
+        /* Reviewer details */
+.reviews_cards .card .reviewer_details {
+    text-align: left;
+    flex: 1;
+}
+
+.reviews_cards .card .reviewer_name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2f2f2f;
+    margin-bottom: 8px;
+}
+
+.reviews_cards .card .review {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+    font-style: italic;
 }
 
 /* Footer */
