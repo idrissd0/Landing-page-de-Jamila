@@ -18,6 +18,35 @@ body {
     align-items: center;
 }
 
+/* For phones */
+@media (max-width: 767px) {
+    body {
+        min-width: 100vh;
+        height: 3000px;
+        margin: 0 auto;
+        background-color: #F2F2F2;
+        color: #000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Small phones (portrait) */
+@media (max-width: 480px) {
+    body {
+        /* min-width: 1000px; */
+        max-width: 1000px;
+        height: 3000px;
+        margin: 0 auto;
+        background-color: #F2F2F2;
+        color: #000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* Hero Section */
 .hero {
     width: 100%;
@@ -556,7 +585,7 @@ canvas {
 
 .step {
     display: flex;
-    align-items:center;
+    align-items: center;
     gap: 1rem;
     background: #f3fdf5;
     padding: 1rem 1.2rem;
