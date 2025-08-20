@@ -346,7 +346,7 @@ canvas {
     font-weight: 700;
 }
 
-        /* Reviews container */
+/* Reviews container */
 .reviews_container {
     width: 100%;
     max-width: 1200px;
@@ -358,7 +358,7 @@ canvas {
     gap: 15px;
 }
 
-        /* Reviews cards layout */
+/* Reviews cards layout */
 .reviews_cards {
     display: flex;
     flex-wrap: wrap;
@@ -366,7 +366,7 @@ canvas {
     justify-content: center;
 }
 
-        /* Individual card */
+/* Individual card */
 .reviews_cards .card {
     flex: 1 1 45%;
     min-width: 300px;
@@ -386,7 +386,7 @@ canvas {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-        /* Profile picture */
+/* Profile picture */
 .reviews_cards .card .reviewer_profile {
     width: 100px;
     height: 100px;
@@ -395,7 +395,7 @@ canvas {
     border: 3px solid #3CA6A6;
 }
 
-        /* Reviewer details */
+/* Reviewer details */
 .reviews_cards .card .reviewer_details {
     text-align: left;
     flex: 1;
@@ -415,61 +415,180 @@ canvas {
     font-style: italic;
 }
 
-/* Footer */
-footer {
+/*********** Ingredients ***********/
+.ingredients {
+    padding: 50px 0;
     width: 100%;
-    padding: 80px 50px;
-    background-color: #000000;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #91D9D9, #24e9e9);
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.ingredients h2 {
+    font-size: 50px;
+    margin-bottom: 60px;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.ingredients_container {
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     text-align: center;
 }
 
-.footer-logo {
-    font-size: 32px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: #91D9D9;
-}
-
-.footer-links {
+.ingredients_cards {
     display: flex;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-links a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #91D9D9;
-}
-
-.social-links {
-    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 40px;
+    justify-content: center;
 }
 
-.social-links a {
-    color: #FFFFFF;
-    font-size: 24px;
-    transition: color 0.3s;
+/* Individual card */
+.ingredients_cards .card {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    height: 150px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.social-links a:hover {
-    color: #91D9D9;
+#card_item {
+    flex: 1 1 45%;
+    width: 95%;
+    min-width: 300px;
+    height: 150px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.copyright {
-    font-size: 16px;
-    color: #91D9D9;
+.ingredients_cards .card:hover,
+#card_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ingredients details */
+.ingredients_cards .card .ingredients_details,
+#card_item .ingredients_details {
+    text-align: center;
+    flex: 1;
+}
+
+.ingredients_cards .card .ingredient {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2f2f2f;
+    margin-bottom: 8px;
+}
+
+#card_item .ingredient {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2f2f2f;
+    margin-bottom: 8px;
+}
+
+/* usage section */
+.usage {
+    width: 100%;
+    padding: 3rem 1rem;
+    background: #f9f9f9;
+    direction: rtl;
+    /* Arabic text right aligned */
+    font-family: "Cairo", sans-serif;
+}
+
+.usage_container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.usage_heading h1 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.usage_heading h1::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #4CAF50;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.usage_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step {
+    display: flex;
+    align-items:center;
+    gap: 1rem;
+    background: #f3fdf5;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    border: 1px solid #d6f5e1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.step_number {
+    background: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.step p {
+    margin: 0;
+    color: #444;
+    font: 600 0.9rem "Cairo", sans-serif;
+    line-height: 1.7;
+    font-size: 1.1rem;
 }
 
 /* ======================================== */
