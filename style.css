@@ -93,32 +93,11 @@ body {
 
 .hero div span p {
     width: 100%;
-}
-
-.hero div span p:nth-of-type(1) {
-    font-size: 25px !important;
+    font-size: 55px !important;
     top: 0;
     font-size: 20px;
     color: #3CA6A6;
-}
-
-.hero div span p:nth-of-type(2) {
-    font-size: 25px;
-    font-weight: 500;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    top: 35px;
-    width: max-content;
-    padding: 1px 10px;
-    background-color: #ffffffc8;
-    border-radius: 5px;
-    color: #ff0000 !important;
-    cursor: pointer;
-    /* transform on hover */
-    transition: font-size 0.5s;
-}
-
-.hero div span p:nth-of-type(2):hover {
-    font-size: 26px;
+    text-shadow: 2px 2px 4px #f2f2f2d3;
 }
 
 .hero-image {
@@ -402,7 +381,7 @@ canvas {
     min-width: 300px;
     max-width: 500px;
     border-radius: 16px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     background-color: #fff;
     padding: 20px;
@@ -418,8 +397,8 @@ canvas {
 
 /* Profile picture */
 .reviews_cards .card .reviewer_profile {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #3CA6A6;
@@ -427,20 +406,21 @@ canvas {
 
 /* Reviewer details */
 .reviews_cards .card .reviewer_details {
-    text-align: left;
+    text-align: center;
     flex: 1;
 }
 
 .reviews_cards .card .reviewer_name {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 600;
-    color: #2f2f2f;
+    color: #4d4d4d;
     margin-bottom: 8px;
 }
 
 .reviews_cards .card .review {
-    font-size: 18px;
-    color: #555;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
     line-height: 1.5;
     font-style: italic;
 }
@@ -527,15 +507,15 @@ canvas {
 }
 
 .ingredients_cards .card .ingredient {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: bolder;
     color: #2f2f2f;
     margin-bottom: 8px;
 }
 
 #card_item .ingredient {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: bolder;
     color: #2f2f2f;
     margin-bottom: 8px;
 }
@@ -559,23 +539,33 @@ canvas {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.usage_heading h1 {
-    font-size: 4rem;
-    color: #333;
+.usage_heading {
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: fit-content;
+    margin: 2rem auto;
     text-align: center;
-    margin-bottom: 2rem;
+}
+
+.usage_heading h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
     position: relative;
 }
 
 .usage_heading h1::after {
     content: "";
-    width: 60px;
-    height: 3px;
-    background: #4CAF50;
+    width: 150px;
+    height: 4px;
+    background: #24e9e9;
     display: block;
-    margin: 10px auto 0;
+    margin: 12px auto 0;
     border-radius: 2px;
 }
+
 
 .usage_content {
     display: flex;
@@ -587,10 +577,10 @@ canvas {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: #f3fdf5;
+    background: #d0ffff;
     padding: 1rem 1.2rem;
     border-radius: 12px;
-    border: 1px solid #d6f5e1;
+    border: 1px solid #61e7e7;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -600,7 +590,7 @@ canvas {
 }
 
 .step_number {
-    background: #4CAF50;
+    background: #24e9e9;
     color: #fff;
     font-weight: bold;
     font-size: 1.2rem;
